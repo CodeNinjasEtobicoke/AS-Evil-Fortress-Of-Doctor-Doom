@@ -47,12 +47,13 @@ public class Laser : MonoBehaviour
         {
             //recalculate the new endpoint
             endPoint = transform.InverseTransformPoint(hit.point);
+            
             //if the object the laser collides with is the player, set up the player death and reset.
             if (hit.collider == playerCollider && !playerDeath)
             {
                 playerDeath = true;
                 OnHitPlayer.Invoke();
-                //game.PlayerHit();
+                game.PlayerHit();
             }
         }
 

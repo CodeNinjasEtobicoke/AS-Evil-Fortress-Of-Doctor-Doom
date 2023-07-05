@@ -36,6 +36,8 @@ public class GameOver : MonoBehaviour
         {
             teleporterAudio.Play();
         }
+
+        //Debug.Log(playerTouchedLaser);
     }
 
     public void PlayerHit()
